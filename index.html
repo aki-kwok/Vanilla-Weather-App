@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/6c665faac4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <span
+          ><input
+            id="city-search"
+            type="text"
+            placeholder="🔎 Enter a city"
+            autocomplete="off"
+            autofocus="on"
+          />
+        </span>
+
+        <div class="buttons">
+          <span id="search">
+            <input type="submit" value="Search" />
+          </span>
+
+          <span id="current">
+            <input type="submit" value="Current" />
+          </span>
+        </div>
+      </form>
+      <i class="bi bi-cloud-sun cloud-icon" id="key-icon"></i>
+
+      <div class="full-city">
+        <span id="city"></span>
+        <span id="country"></span>
+      </div>
+      <h2 id="description"></h2>
+      <h3 id="current-date"></h3>
+
+      <hr />
+
+      <div class="main-temp">
+        <p class="temperature-label">H</p>
+        <div class="high-main-temp" id="high-temperature">10</div>
+        <p class="temperature-label">L</p>
+        <div class="low-main-temp" id="low-temperature">4</div>
+
+        <span class="units" id="units">
+          <a href="#" id="farenheit-link">°F</a>
+          |
+          <a href="#" id="celsius-link">°C</a>
+        </span>
+      </div>
+      <p class="humidity-wind">
+        Humidity: <span id="humidity"> 0 </span>%<br />
+        Wind: <span id="wind">0</span>km/h
+      </p>
+      <div class="row align-items-start">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <span class="week-day">Sat</span>
+              <br />
+              <i class="bi bi-clouds cloud-small"></i>
+              <br />
+              <span class="forecast-temp-high">13°</span>
+              <span class="forecast-temp-low">| 6°</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <span class="week-day">Sun</span>
+              <br />
+              <i class="bi bi-brightness-high sun-icon"></i>
+              <br />
+              <span class="forecast-temp-high">10°</span>
+              <span class="forecast-temp-low">| 7°</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <span class="week-day">Mon</span>
+              <br />
+              <i class="bi bi-cloud-drizzle rain-icon"></i>
+              <br />
+              <span class="forecast-temp-high">9°</span>
+              <span class="forecast-temp-low">| 8°</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <span class="week-day">Tues</span>
+              <br />
+              <i class="bi bi-cloud-sun sun-icon"></i>
+              <br />
+              <span class="forecast-temp-high">10°</span>
+              <span class="forecast-temp-low">| 5°</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <span class="week-day">Wed</span>
+              <br />
+              <i class="bi bi-brightness-high sun-icon"></i>
+              <br />
+              <span class="forecast-temp-high">11°</span>
+              <span class="forecast-temp-low">| 6°</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <a href="" class="open-source">Open-source code</a> by
+    <a href="" class="footer"> Aki Maedomari</a>
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
