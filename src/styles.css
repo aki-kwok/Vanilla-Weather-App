@@ -24,9 +24,9 @@ a {
 }
 
 hr {
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
-  padding: 1px;
+  padding: 1.5px;
 }
 
 input[type="submit"] {
@@ -103,7 +103,7 @@ div.container {
 .temperature-label {
   display: inline-block;
   font-size: 13px;
-  line-height: 50px;
+  line-height: 36px;
   margin: 0 auto;
   vertical-align: top;
 }
@@ -111,7 +111,7 @@ div.container {
 .high-main-temp,
 .low-main-temp {
   display: inline-block;
-  font-size: 42px;
+  font-size: 36px;
 }
 
 .high-main-temp {
@@ -124,8 +124,8 @@ div.container {
 
 .units {
   display: inline-block;
-  font-size: 14px;
-  line-height: 50px;
+  font-size: 15px;
+  line-height: 36px;
   vertical-align: top;
 }
 
@@ -136,7 +136,7 @@ div.container {
 .humidity-wind {
   font-size: 14px;
   font-weight: 100;
-  margin: 15px;
+  margin: 10px;
 }
 
 .row.align-items-start {
@@ -186,4 +186,17 @@ div.container {
   color: white;
   font-size: 16px;
   font-weight: 300;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
+}
+
+.units .active {
+  color: #ffb4cf;
+  cursor: default;
+}
+
+.units.active:hover {
+  text-decoration: none;
 }

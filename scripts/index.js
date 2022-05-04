@@ -1,5 +1,3 @@
-// Date
-
 let date = new Date();
 
 function formatDate(date) {
@@ -49,11 +47,11 @@ function formatDate(date) {
 
 formatDate(date);
 
-// Search Engine
-
 function displayWeatherCondition(response) {
+  highCelsiusTemperature = response.data.main.temp_max;
+  lowCelsiusTemperature = response.data.main.temp_min;
+
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#country").innerHTML = response.data.sys.country;
   document.querySelector("#high-temperature").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -64,9 +62,10 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+
+  console.log(response.data);
 }
 
 function search(city) {
@@ -81,9 +80,6 @@ function searchNewCity(event) {
   search(city);
 }
 
-let form = document.querySelector("form");
-form.addEventListener("submit", searchNewCity);
-
 function searchLocation(position) {
   let apiKey = "d1ad1fd86963fc94e9e69de9fcb0e5bc";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -95,7 +91,46 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let highTemperatureElement = document.querySelector("#high-temperature");
+  let lowTemperatureElement = document.querySelector("#low-temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let highFarenheitTemperature = (12 * 9) / 5 + 32;
+  let lowFarenheitTemperature = (8 * 9) / 5 + 32;
+
+  highTemperatureElement.innerHTML = Math.round(highFarenheitTemperature);
+  lowTemperatureElement.innerHTML = Math.round(lowFarenheitTemperature);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let highTemperatureElement = document.querySelector("#high-temperature");
+  let lowTemperatureElement = document.querySelector("#low-temperature");
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  highTemperatureElement.innerHTML = Math.round(highCelsiusTemperature);
+  lowTemperatureElement.innerHTML = Math.round(lowCelsiusTemperature);
+}
+
 let currentLocationButton = document.querySelector("#current");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let highCelsiusTemperature = null;
+let lowCelsiusTemperature = null;
+
+let form = document.querySelector("form");
+form.addEventListener("submit", searchNewCity);
+
+let fahrenheitLink = document.querySelector("#farenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
 
 search("Seattle");
