@@ -7,12 +7,12 @@ body {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
   margin-top: 15px;
 }
 h3 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 50;
   padding-top: -10px;
   margin-bottom: 15px;
@@ -67,8 +67,8 @@ div.container {
   color: #fcfefe;
   display: block;
   margin: 0 auto;
-  max-width: 935px;
-  max-height: 675px;
+  max-width: 934px;
+  max-height: 670px;
   padding-top: 45px;
   padding-bottom: 10px;
   text-align: center;
@@ -86,12 +86,12 @@ div.container {
 }
 
 #key-icon {
-  font-size: 45px;
+  font-size: 40px;
   padding-bottom: 14px;
 }
 
 .full-city {
-  font-size: 25px;
+  font-size: 26px;
   font-weight: 400;
   margin-bottom: -15px;
   text-transform: capitalize;
@@ -193,10 +193,11 @@ div.container {
 }
 
 .units .active {
-  color: #ffb4cf;
+  color: rgb(247, 74, 160);
   cursor: default;
 }
 
 .units.active:hover {
   text-decoration: none;
+  color: white;
 }
