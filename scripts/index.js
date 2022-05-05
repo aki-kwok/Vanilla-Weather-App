@@ -47,6 +47,34 @@ function formatDate(date) {
 
 formatDate(date);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class ="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+       <div class="card">
+         <div class="card-body">
+           <span class="week-day">${day}</span>
+           <br />
+           <i class="bi bi-clouds cloud-small"></i>
+           <br />
+           <span class="forecast-temp-high">13°</span>
+           <span class="forecast-temp-low">| 6°</span>
+        </div>
+      </div>
+     </div> 
+  
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   highCelsiusTemperature = response.data.main.temp_max;
   lowCelsiusTemperature = response.data.main.temp_min;
@@ -134,3 +162,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 search("Seattle");
+
+displayForecast();
