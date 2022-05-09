@@ -76,7 +76,7 @@ function displayForecast(response) {
              forecastDay.weather[0].icon
            }@2x.png"
            alt=""
-           width="42"
+           width="42">
            </img>
            <br />
            <span class="forecast-temp-high">${Math.round(
@@ -98,8 +98,10 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "d1ad1fd86963fc94e9e69de9fcb0e5bc";
   let apiUrl = `https:api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
+
+  getForecast(response.data.coord);
 }
 
 function displayWeatherCondition(response) {
