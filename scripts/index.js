@@ -71,13 +71,10 @@ function displayForecast(response) {
          <div class="card-body">
            <span class="week-day">${formatDay(forecastDay.dt)}</span>
            <br />
-           <img
-           src="http://openweathermap.org/img/wn/${
-             forecastDay.weather[0].icon
-           }@2x.png"
-           alt=""
-           width="42">
-           </img>
+           <img id="forecast-icons"
+              src="weathericons/${forecastDay.weather[0].icon}.png"
+              alt=""
+              width=27px/>
            <br />
            <span class="forecast-temp-high">${Math.round(
              forecastDay.temp.max
@@ -119,6 +116,13 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
+  let iconElement = document.querySelector("#weather-icons");
+  iconElement.setAttribute(
+    "src",
+    `weathericons/${response.data.weather[0].icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
 }
