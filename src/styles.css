@@ -15,7 +15,7 @@ h3 {
   font-size: 15px;
   font-weight: 50;
   padding-top: -10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 a {
@@ -24,9 +24,9 @@ a {
 }
 
 hr {
-  width: 250px;
+  width: 560px;
   margin: 0 auto;
-  padding: 0.5px;
+  padding: 1px;
 }
 
 input[type="submit"] {
@@ -68,7 +68,7 @@ div.container {
   display: block;
   margin: 0 auto;
   max-width: 750px;
-  max-height: 700px;
+  max-height: 750px;
   padding-top: 45px;
   padding-bottom: 10px;
   text-align: center;
@@ -108,6 +108,7 @@ div.container {
   display: inline;
   font-size: 40px;
   font-weight: 450;
+  margin-top: -10px;
   margin-right: -50px;
   margin-bottom: 10px;
   text-align: center;
@@ -117,13 +118,14 @@ div.container {
   font-size: 11px;
   font-weight: 100;
   margin: 5px;
-  padding-top: 4px;
-  padding-bottom: 10px;
+  padding-top: -14px;
+  padding-bottom: 20px;
 }
 
 .row {
-  margin: 18px 63px;
-  padding-top: -15px;
+  margin: 25px 63px;
+  margin-top: 10px;
+  padding-top: -25px;
 }
 
 .units {
@@ -153,24 +155,21 @@ div.container {
   background: none;
   height: 100px;
   border: none;
-  padding: 10px -50px;
-  margin: -15px -20px;
+  margin: -10px;
 }
 
 .week-day {
   color: white;
   font-size: 14px;
   font-weight: 300;
-  padding-bottom: 12px;
-}
-
-.forecast-icons {
+  padding-bottom: 20px;
 }
 
 .forecast-temp-high,
 .forecast-temp-low {
   color: white;
   font-size: 12px;
+  margin-top: 10px;
 }
 
 .forecast-temp-high {
