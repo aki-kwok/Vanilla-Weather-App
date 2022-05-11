@@ -100,16 +100,14 @@ function getForecast(coordinates) {
 }
 
 function displayWeatherCondition(response) {
+  console.log(response.data);
   highCelsiusTemperature = response.data.main.temp_max;
-  lowCelsiusTemperature = response.data.main.temp_min;
 
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#high-temperature").innerHTML = Math.round(
-    response.data.main.temp_max
+  document.querySelector("#main-temperature").innerHTML = Math.round(
+    response.data.main.temp
   );
-  document.querySelector("#low-temperature").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -153,35 +151,29 @@ function getCurrentLocation(event) {
 function displayFahrenheit(event) {
   event.preventDefault();
   let highTemperatureElement = document.querySelector("#high-temperature");
-  let lowTemperatureElement = document.querySelector("#low-temperature");
 
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
 
   let highFarenheitTemperature = (highCelsiusTemperature * 9) / 5 + 32;
-  let lowFarenheitTemperature = (lowCelsiusTemperature * 9) / 5 + 32;
 
   highTemperatureElement.innerHTML = Math.round(highFarenheitTemperature);
-  lowTemperatureElement.innerHTML = Math.round(lowFarenheitTemperature);
 }
 
 function displayCelsius(event) {
   event.preventDefault();
   let highTemperatureElement = document.querySelector("#high-temperature");
-  let lowTemperatureElement = document.querySelector("#low-temperature");
 
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 
   highTemperatureElement.innerHTML = Math.round(highCelsiusTemperature);
-  lowTemperatureElement.innerHTML = Math.round(lowCelsiusTemperature);
 }
 
 let currentLocationButton = document.querySelector("#current");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let highCelsiusTemperature = null;
-let lowCelsiusTemperature = null;
 
 let form = document.querySelector("form");
 form.addEventListener("submit", searchNewCity);

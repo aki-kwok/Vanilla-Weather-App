@@ -104,36 +104,16 @@ div.container {
   text-transform: capitalize;
 }
 
-.temperature-label {
-  display: inline-block;
-  font-size: 13px;
-  line-height: 36px;
-  margin: 0 auto;
-  vertical-align: top;
-}
-
-.high-main-temp,
-.low-main-temp {
+.main-temp {
   display: inline-block;
   font-size: 36px;
-}
-
-.high-main-temp {
   font-weight: 450;
-}
-
-.low-main-temp {
-  font-weight: 100;
-}
-
-.temperature-label-cel {
-  font-weight: bold;
 }
 
 .humidity-wind {
   font-size: 12px;
   font-weight: 100;
-  margin: 10px;
+  margin: 5px;
   padding-bottom: 10px;
 }
 
@@ -145,6 +125,7 @@ div.container {
   display: inline-block;
   font-size: 15px;
   line-height: 36px;
+  margin-left: -10px;
   vertical-align: top;
 }
 
