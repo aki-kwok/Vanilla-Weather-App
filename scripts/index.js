@@ -74,7 +74,7 @@ function displayForecast(response) {
            <img id="forecast-icons"
               src="weathericons/${forecastDay.weather[0].icon}.png"
               alt=""
-              width=24px/>
+              width=20px/>
            <br />
            <span class="forecast-temp-high">${Math.round(
              forecastDay.temp.max
@@ -108,6 +108,9 @@ function displayWeatherCondition(response) {
     response.data.main.temp
   );
 
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
