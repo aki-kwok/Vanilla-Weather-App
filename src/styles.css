@@ -122,7 +122,8 @@ div.container {
 }
 
 .row {
-  margin: 20px 63px;
+  margin: 18px 63px;
+  padding-top: -15px;
 }
 
 .units {
@@ -161,6 +162,9 @@ div.container {
   font-size: 14px;
   font-weight: 300;
   padding-bottom: 12px;
+}
+
+.forecast-icons {
 }
 
 .forecast-temp-high,
