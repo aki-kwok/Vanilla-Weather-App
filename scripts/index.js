@@ -158,8 +158,8 @@ function displayFahrenheit(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
 
-  let highFarenheitTemperature = (12 * 9) / 5 + 32;
-  let lowFarenheitTemperature = (8 * 9) / 5 + 32;
+  let highFarenheitTemperature = (highCelsiusTemperature * 9) / 5 + 32;
+  let lowFarenheitTemperature = (lowCelsiusTemperature * 9) / 5 + 32;
 
   highTemperatureElement.innerHTML = Math.round(highFarenheitTemperature);
   lowTemperatureElement.innerHTML = Math.round(lowFarenheitTemperature);
