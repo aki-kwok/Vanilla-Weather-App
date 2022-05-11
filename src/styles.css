@@ -89,6 +89,10 @@ div.container {
   padding-top: 15px;
 }
 
+#description::first-letter {
+  text-transform: capitalize;
+}
+
 .buttons {
   padding: 22px;
 }
@@ -143,6 +147,7 @@ div.container {
   line-height: 36px;
   vertical-align: top;
 }
+
 .units .active {
   color: rgb(247, 74, 160);
   cursor: default;
@@ -186,6 +191,15 @@ div.container {
   font-weight: 300;
 }
 
-#description::first-letter {
-  text-transform: capitalize;
+.footer {
+  text-decoration: underline;
+  color: #e05c8c;
+}
+
+.footer:hover {
+  color: #e05c8c;
+}
+
+.footer-all {
+  font-size: 12px;
 }
