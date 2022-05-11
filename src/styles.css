@@ -86,18 +86,18 @@ div.container {
 }
 
 #weather-icons {
-  font-size: 40px;
-  padding-bottom: 14px;
+  padding-top: 15px;
+}
+
+.buttons {
+  padding: 22px;
 }
 
 .full-city {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
-  margin-bottom: -15px;
+  margin-top: -15px;
   text-transform: capitalize;
-}
-.buttons {
-  padding: 22px;
 }
 
 .temperature-label {
@@ -122,25 +122,35 @@ div.container {
   font-weight: 100;
 }
 
+.temperature-label-cel {
+  font-weight: bold;
+}
+
+.humidity-wind {
+  font-size: 12px;
+  font-weight: 100;
+  margin: 10px;
+  padding-bottom: 10px;
+}
+
+.row {
+  margin: 20px 37px;
+}
+
 .units {
   display: inline-block;
   font-size: 15px;
   line-height: 36px;
   vertical-align: top;
 }
-
-.temperature-label-cel {
-  font-weight: bold;
+.units .active {
+  color: rgb(247, 74, 160);
+  cursor: default;
 }
 
-.humidity-wind {
-  font-size: 14px;
-  font-weight: 100;
-  margin: 10px;
-}
-
-.row {
-  margin: 20px 37px;
+.units.active:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .col-2 {
@@ -150,22 +160,10 @@ div.container {
 
 .card {
   background: none;
-  border: none;
-  border-radius: 30px;
   height: 110px;
-  padding: 2px -10px;
-}
-
-.card:hover {
-  box-shadow: 2px 2px 10px rgba(253, 253, 253, 0.6);
-  transition: all 200ms ease-in-out;
-  cursor: pointer;
-}
-
-.cloud-small,
-.sun-icon,
-.rain-icon {
-  font-size: 25px;
+  border: none;
+  padding: 20px -10px;
+  margin: -10px -15px;
 }
 
 .forecast-temp-high,
@@ -184,20 +182,10 @@ div.container {
 
 .week-day {
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
 }
 
 #description::first-letter {
   text-transform: capitalize;
-}
-
-.units .active {
-  color: rgb(247, 74, 160);
-  cursor: default;
-}
-
-.units.active:hover {
-  text-decoration: none;
-  color: white;
 }

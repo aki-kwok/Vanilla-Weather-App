@@ -74,7 +74,7 @@ function displayForecast(response) {
            <img id="forecast-icons"
               src="weathericons/${forecastDay.weather[0].icon}.png"
               alt=""
-              width=27px/>
+              width=24px/>
            <br />
            <span class="forecast-temp-high">${Math.round(
              forecastDay.temp.max
