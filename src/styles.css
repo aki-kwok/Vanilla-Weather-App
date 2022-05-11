@@ -15,7 +15,7 @@ h3 {
   font-size: 15px;
   font-weight: 50;
   padding-top: -10px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 a {
@@ -98,16 +98,10 @@ div.container {
 }
 
 .full-city {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 400;
   margin-top: 10px;
   text-transform: capitalize;
-}
-
-.last-updated {
-  font-size: 12px;
-  font-weight: 300;
-  margin-bottom: 2px;
 }
 
 .main-temp {
