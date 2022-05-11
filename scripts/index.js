@@ -101,7 +101,7 @@ function getForecast(coordinates) {
 
 function displayWeatherCondition(response) {
   console.log(response.data);
-  highCelsiusTemperature = response.data.main.temp_max;
+  CelsiusTemperature = response.data.main.temp;
 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#main-temperature").innerHTML = Math.round(
@@ -150,30 +150,30 @@ function getCurrentLocation(event) {
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  let highTemperatureElement = document.querySelector("#high-temperature");
+  let TemperatureElement = document.querySelector("#main-temperature");
 
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
 
-  let highFarenheitTemperature = (highCelsiusTemperature * 9) / 5 + 32;
+  let FarenheitTemperature = (CelsiusTemperature * 9) / 5 + 32;
 
-  highTemperatureElement.innerHTML = Math.round(highFarenheitTemperature);
+  TemperatureElement.innerHTML = Math.round(FarenheitTemperature);
 }
 
 function displayCelsius(event) {
   event.preventDefault();
-  let highTemperatureElement = document.querySelector("#high-temperature");
+  let TemperatureElement = document.querySelector("#main-temperature");
 
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 
-  highTemperatureElement.innerHTML = Math.round(highCelsiusTemperature);
+  TemperatureElement.innerHTML = Math.round(CelsiusTemperature);
 }
 
 let currentLocationButton = document.querySelector("#current");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let highCelsiusTemperature = null;
+let CelsiusTemperature = null;
 
 let form = document.querySelector("form");
 form.addEventListener("submit", searchNewCity);

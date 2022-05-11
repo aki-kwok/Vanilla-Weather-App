@@ -105,9 +105,11 @@ div.container {
 }
 
 .main-temp {
-  display: inline-block;
+  display: inline;
   font-size: 36px;
   font-weight: 450;
+  margin-right: -60px;
+  text-align: center;
 }
 
 .humidity-wind {
@@ -125,7 +127,7 @@ div.container {
   display: inline-block;
   font-size: 15px;
   line-height: 36px;
-  margin-left: -10px;
+  margin-left: 50px;
   vertical-align: top;
 }
 
