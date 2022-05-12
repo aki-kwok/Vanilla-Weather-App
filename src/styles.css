@@ -7,8 +7,8 @@ body {
 }
 
 h2 {
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 17px;
+  font-weight: 150;
   margin-top: 3px;
 }
 h3 {
@@ -35,8 +35,8 @@ input[type="submit"] {
   border-radius: 5px;
   color: #213553;
   font-size: 12px;
-  padding: 6px 10px;
-  margin: 2px 5px;
+  padding: 4px 10px;
+  margin: -20px 5px;
 }
 
 input[type="submit"]:hover {
@@ -80,13 +80,13 @@ div.container {
   border-radius: 5px;
   font-size: 12px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 6px;
   text-align: center;
   width: 330px;
 }
 
 #weather-icons {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 #description::first-letter {
@@ -99,7 +99,7 @@ div.container {
 
 .full-city {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 5px;
   text-transform: capitalize;
 }
