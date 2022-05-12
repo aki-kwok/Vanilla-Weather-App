@@ -58,12 +58,12 @@ input[type="submit"]:hover {
 div.container {
   background: linear-gradient(
     109.6deg,
-    rgb(36, 45, 57) 11.2%,
+    rgb(37, 48, 63) 11.2%,
     rgb(15, 36, 58) 51.2%,
     rgb(0, 0, 0) 98.6%
   );
   border-radius: 100px;
-  box-shadow: 7px 7px 10px rgba(241, 96, 193, 0.8);
+  box-shadow: 7px 7px 9px rgba(251, 187, 151, 0.8);
   color: #fcfefe;
   display: block;
   margin: 0 auto;
@@ -100,7 +100,7 @@ div.container {
 .full-city {
   font-size: 30px;
   font-weight: 400;
-  margin-top: 10px;
+  margin-top: 5px;
   text-transform: capitalize;
 }
 
